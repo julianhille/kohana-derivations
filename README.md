@@ -1,5 +1,7 @@
+
 # Kohana - derivation
 - Version: 0.0.1
+
 This module allows some kind of plugin system and unlimited amount of extending classes dynamically.
 
 Normally in kohana you can extend classes by folders.
@@ -56,21 +58,20 @@ Should print out some stuff.
 
 After that look at your APPATH.'cache/classes/classes' folder. There you'll find a a.php
 
-Whith this Content:
+With this content:
+    
+    defined('SYSPATH') or die('No direct script access.');    
+    
+    class B extends Kohana_A {
+    	public function test() {
+    	parent::test();
+    		var_dump('test_Class_B');
+    	}
+    
+    }
+    
+    class A extends B {}
 
-```
- defined('SYSPATH') or die('No direct script access.'); 
-
-class B extends Kohana_A {
-	public function test() {
-	parent::test();
-		var_dump('test_Class_B');
-	}
-
-}
-
-class A extends B {}
-```
 
 
 ##TODO
