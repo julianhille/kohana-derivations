@@ -51,7 +51,7 @@ After that look at your APPATH.'cache/classes/classes' folder. There you'll find
 
 Whith this Content:
 ```php
-<?php defined('SYSPATH') or die('No direct script access.'); 
+ defined('SYSPATH') or die('No direct script access.'); 
 
 class B extends Kohana_A {
 	public function test() {
@@ -62,8 +62,9 @@ class B extends Kohana_A {
 }
 
 class A extends B {}
-
 ```
+
+
 ##TODO
 - Cache time put into variable
 - Code Formatting
